@@ -1,0 +1,23 @@
+{
+  "name": "thangnm93/coccoc-test-shipping-service",
+  "type": "php-extension",
+  "description": "It helps Vietnamese buy products on Amazon website.",
+  "authors": [
+    {
+      "name": "Thang Nguyen",
+      "email": "minhthang0403@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php" : "~7.0.1||^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5||^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Coccoc\\ShippingService\\": "src"
+    }
+  }
+}
