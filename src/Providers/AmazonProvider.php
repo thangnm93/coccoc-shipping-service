@@ -1,11 +1,16 @@
 <?php
+/**
+ * @copyright Copyright (c) 2021
+ * @author Thang Nguyen
+ * @since 1.0
+ */
 
-namespace Coccoc\ShippingService\Delivery;
+namespace Coccoc\ShippingService\Providers;
 
-use Coccoc\ShippingService\Contracts\DeliveryInterface;
-use Coccoc\ShippingService\Delivery;
+use Coccoc\ShippingService\Contracts\ProviderInterface;
+use Coccoc\ShippingService\Provider;
 
-class AmazonDelivery extends Delivery implements DeliveryInterface
+class AmazonProvider extends Provider implements ProviderInterface
 {
 
     const WEIGHT_COEFFICIENT = 11;
@@ -32,14 +37,17 @@ class AmazonDelivery extends Delivery implements DeliveryInterface
     }
 
     /**
+     * Get fee of product by product type
+     *
      * @return float
      */
     public function getFeeByProductType()
     {
-        return 0.0;
+        return 0;
     }
 
     /**
+     * Get shipping fee of product
      *
      * @return float
      */

@@ -1,30 +1,41 @@
 <?php
+/**
+ * @copyright Copyright (c) 2021
+ * @author Thang Nguyen
+ * @since 1.0
+ */
 
 namespace Coccoc\ShippingService\Services;
 
-use Coccoc\ShippingService\Contracts\DeliveryInterface;
-use Coccoc\ShippingService\Contracts\ProductInterface;
+use Coccoc\ShippingService\Contracts\ProviderInterface;
 use Coccoc\ShippingService\Contracts\ServiceInterface;
 use Coccoc\ShippingService\Exceptions\ShippingServiceException;
 
 class ShippingService implements ServiceInterface
 {
-    protected $delivery;
-    protected $product;
 
-    public function __construct(DeliveryInterface $delivery, ProductInterface $product)
+    protected $provider;
+
+    /**
+     * ShippingService constructor.
+     *
+     * @param ProviderInterface $provider
+     */
+    public function __construct(ProviderInterface $provider)
     {
-        $this->delivery = $delivery;
-        $this->product = $product;
+        $this->provider = $provider;
     }
 
-    public function handle()
+    /**
+     *
+     *
+     * @return float|mixed
+     * @throws ShippingServiceException
+     */
+    public function getPrice()
     {
         try {
-            $this->delivery->setProduct($this->product);
-            $product_price = $this->product->getPrice();
-            $shipping_fee = $this->delivery->getShippingFee();
-            return $product_price + $shipping_fee;
+            return $this->provider->getShippingFee();
         } catch (\Exception $e)
         {
             throw new ShippingServiceException($e->getMessage());
