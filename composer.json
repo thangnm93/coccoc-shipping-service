@@ -19,5 +19,8 @@
     "psr-4": {
       "Coccoc\\ShippingService\\": "src"
     }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
   }
 }
