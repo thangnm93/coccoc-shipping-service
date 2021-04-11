@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Coccoc\\ShippingService\\": "src"
+      "Coccoc\\ShippingService\\": "src\\"
     }
   },
   "scripts": {
