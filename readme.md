@@ -6,13 +6,17 @@ This is an easy to use package to calculate the cross price.
 
 * Amazon
 
-## 1. Installation
+## 1. Requirements
+* [PHP >= 7.1.0](http://php.net)
+
+## 2. Installation
+Require using [Composer](https://getcomposer.org):
 
 ```bash
 $ composer install
 ```
 
-## 2. How to use
+## 3. How to use
 
 ```php
 include_once './vendor/autoload.php';
@@ -46,7 +50,7 @@ $order_gross_price = $order_service->handle();
 
 ```
 
-## 3. Testing
+## 4. Testing
 
 ```bash
 $ ./vendor/bin/phpunit

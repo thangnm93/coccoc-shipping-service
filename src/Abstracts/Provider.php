@@ -34,4 +34,5 @@ abstract class Provider implements ProviderInterface
     {
         return $this->product->getPrice();
     }
+
 }
