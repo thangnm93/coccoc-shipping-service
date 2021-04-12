@@ -13,7 +13,7 @@ interface ServiceInterface
     /**
      * Handle the function of get
      *
-     * @return false
+     * @return mixed
      */
     public function handle();
 
