@@ -42,7 +42,7 @@ foreach ($products as $_product) {
     $product->setDepth($_product['depth']);
     $order_service->setProduct($product);
 }
-$order_gross_price = $order_service->getPrice();
+$order_gross_price = $order_service->handle();
 
 ```
 

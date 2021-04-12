@@ -43,7 +43,7 @@ class OrderService implements ServiceInterface
      *
      * @return float
      */
-    public function getPrice()
+    public function handle()
     {
         try {
             $gross_price = 0;
@@ -51,7 +51,7 @@ class OrderService implements ServiceInterface
             {
                 $this->provider->setProduct($product);
                 $shipping_service = new ShippingService($this->provider);
-                $gross_price += $shipping_service->getPrice() + $this->provider->getProductPrice();
+                $gross_price += $shipping_service->handle() + $this->provider->getProductPrice();
             }
             return $gross_price;
         } catch (ShippingServiceException $e)

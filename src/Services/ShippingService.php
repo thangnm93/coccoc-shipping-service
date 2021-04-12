@@ -27,12 +27,12 @@ class ShippingService implements ServiceInterface
     }
 
     /**
-     *
+     * Handle get shipping fee
      *
      * @return float|mixed
      * @throws ShippingServiceException
      */
-    public function getPrice()
+    public function handle()
     {
         try {
             return $this->provider->getShippingFee();

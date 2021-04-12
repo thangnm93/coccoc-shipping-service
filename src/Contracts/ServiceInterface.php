@@ -15,6 +15,6 @@ interface ServiceInterface
      *
      * @return false
      */
-    public function getPrice();
+    public function handle();
 
 }
