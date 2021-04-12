@@ -8,23 +8,23 @@ use \Coccoc\ShippingService\Product;
 $products = array(
     array(
         'price' => 10,
-        'weight' => 0.03,
-        'width' => 120,
-        'height' => 110,
+        'weight' => 50, // gram
+        'width' => 120, // cm
+        'height' => 110, // cm
         'depth' => 10,
     ),
     array(
         'price' => 20,
-        'weight' => 0.01,
-        'width' => 100,
-        'height' => 100,
+        'weight' => 100, // gram
+        'width' => 100, // cm
+        'height' => 100, // cm
         'depth' => 20,
     ),
     array(
         'price' => 30,
-        'weight' => 0.03,
-        'width' => 120,
-        'height' => 110,
+        'weight' => 1200, // gram
+        'width' => 120, // cm
+        'height' => 110, // cm
         'depth' => 50,
     ),
 );
