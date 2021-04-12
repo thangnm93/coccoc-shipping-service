@@ -33,7 +33,7 @@ class BaseTestCase extends TestCase
         self::assertCount(0, $this->products);
     }
 
-    protected function mockProducts()
+    protected function mockProducts(): void
     {
         $products = array(
             array(
@@ -54,7 +54,7 @@ class BaseTestCase extends TestCase
         $this->products = $products;
     }
 
-    protected function destroyProducts()
+    protected function destroyProducts(): void
     {
         $this->products = array();
     }

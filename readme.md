@@ -28,10 +28,17 @@ use \Coccoc\ShippingService\Product;
 $products = array(
     array(
         'price' => 10,
-        'weight' => 50, // gram
-        'width' => 120, // cm
-        'height' => 110, // cm
+        'weight' => 120, // gram
+        'width' => 100, // cm
+        'height' => 120, // cm
         'depth' => 10,
+    ),
+    array(
+        'price' => 20,
+        'weight' => 150, // gram
+        'width' => 110, // cm
+        'height' => 120, // cm
+        'depth' => 8,
     )
 );
 
@@ -55,6 +62,11 @@ $order_gross_price = $order_service->handle();
 ```bash
 $ ./vendor/bin/phpunit --testdox --coverage-text --coverage-clover=coverage.clover
 ```
+or using this command
+```bash
+$ composer test
+```
+
 ##### Example command run test
 
 ```bash

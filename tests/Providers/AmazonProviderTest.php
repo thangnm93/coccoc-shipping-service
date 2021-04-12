@@ -1,8 +1,9 @@
 <?php
 
-namespace Coccoc\ShippingService\Tests;
+namespace Coccoc\ShippingService\Tests\Providers;
 
 use Coccoc\ShippingService\Product;
+use Coccoc\ShippingService\Tests\BaseTestCase;
 use Coccoc\ShippingService\Providers\AmazonProvider;
 use Coccoc\ShippingService\Contracts\ProductInterface;
 
