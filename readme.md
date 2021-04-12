@@ -15,7 +15,7 @@ $ composer install
 ## 2. Unit Testing
 
 ```bash
-$ composer test
+$ ./vendor/bin/phpunit
 ```
 ##### Example command run test
 
