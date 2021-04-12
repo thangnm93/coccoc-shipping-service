@@ -66,9 +66,3 @@ or using this command
 ```bash
 $ composer test
 ```
-
-##### Example command run test
-
-```bash
-$ php example.php
-```
