@@ -6,4 +6,19 @@ This is an easy to use package to calculate the cross price.
 
 * Amazon
 
-## Installation
+## 1. Installation
+
+```bash
+$ composer install
+```
+
+## 2. Unit Testing
+
+```bash
+$ composer test
+```
+##### Example command run test
+
+```bash
+$ php example.php
+```

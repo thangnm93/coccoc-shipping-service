@@ -8,7 +8,7 @@
 namespace Coccoc\ShippingService\Providers;
 
 use Coccoc\ShippingService\Contracts\ProviderInterface;
-use Coccoc\ShippingService\Provider;
+use Coccoc\ShippingService\Abstracts\Provider;
 
 class AmazonProvider extends Provider implements ProviderInterface
 {

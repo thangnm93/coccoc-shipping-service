@@ -5,7 +5,7 @@
  * @since 1.0
  */
 
-namespace Coccoc\ShippingService;
+namespace Coccoc\ShippingService\Abstracts;
 
 use Coccoc\ShippingService\Contracts\ProviderInterface;
 use Coccoc\ShippingService\Contracts\ProductInterface;
