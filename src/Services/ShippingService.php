@@ -9,7 +9,6 @@ namespace Coccoc\ShippingService\Services;
 
 use Coccoc\ShippingService\Contracts\ProviderInterface;
 use Coccoc\ShippingService\Contracts\ServiceInterface;
-use Coccoc\ShippingService\Exceptions\ShippingServiceException;
 
 class ShippingService implements ServiceInterface
 {
@@ -30,16 +29,10 @@ class ShippingService implements ServiceInterface
      * Handle get shipping fee
      *
      * @return float|mixed
-     * @throws ShippingServiceException
      */
     public function handle()
     {
-        try {
-            return $this->provider->getShippingFee();
-        } catch (\Exception $e)
-        {
-            throw new ShippingServiceException($e->getMessage());
-        }
+        return $this->provider->getShippingFee();
     }
 
 }

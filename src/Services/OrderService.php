@@ -10,7 +10,6 @@ namespace Coccoc\ShippingService\Services;
 use Coccoc\ShippingService\Contracts\ProviderInterface;
 use Coccoc\ShippingService\Contracts\ProductInterface;
 use Coccoc\ShippingService\Contracts\ServiceInterface;
-use Coccoc\ShippingService\Exceptions\ShippingServiceException;
 
 class OrderService implements ServiceInterface
 {
@@ -45,19 +44,14 @@ class OrderService implements ServiceInterface
      */
     public function handle()
     {
-        try {
-            $gross_price = 0;
-            foreach ($this->products as $product)
-            {
-                $this->provider->setProduct($product);
-                $shipping_service = new ShippingService($this->provider);
-                $gross_price += $shipping_service->handle() + $this->provider->getProductPrice();
-            }
-            return $gross_price;
-        } catch (ShippingServiceException $e)
+        $gross_price = 0;
+        foreach ($this->products as $product)
         {
-            return 0;
+            $this->provider->setProduct($product);
+            $shipping_service = new ShippingService($this->provider);
+            $gross_price += $shipping_service->handle() + $this->provider->getProductPrice();
         }
+        return $gross_price;
     }
 
 }

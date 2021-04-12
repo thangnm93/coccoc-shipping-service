@@ -53,7 +53,7 @@ $order_gross_price = $order_service->handle();
 ## 4. Testing
 
 ```bash
-$ ./vendor/bin/phpunit
+$ ./vendor/bin/phpunit --testdox --coverage-text --coverage-clover=coverage.clover
 ```
 ##### Example command run test
 
