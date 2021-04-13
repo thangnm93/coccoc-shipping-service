@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2021
  * @author Thang Nguyen
@@ -156,5 +158,4 @@ class Product implements ProductInterface
     {
         return $this->depth;
     }
-
 }

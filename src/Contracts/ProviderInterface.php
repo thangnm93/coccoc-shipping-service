@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2021
  * @author Thang Nguyen
@@ -37,5 +39,4 @@ interface ProviderInterface
      * @return float
      */
     public function getShippingFee();
-
 }

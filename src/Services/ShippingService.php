@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2021
  * @author Thang Nguyen
@@ -34,5 +36,4 @@ class ShippingService implements ServiceInterface
     {
         return $this->provider->getShippingFee();
     }
-
 }

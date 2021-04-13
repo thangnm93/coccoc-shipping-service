@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2021
  * @author Thang Nguyen
@@ -84,5 +86,4 @@ interface ProductInterface
      * @return mixed
      */
     public function setDepth(float $depth);
-
 }

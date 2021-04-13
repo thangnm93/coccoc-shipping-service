@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * @copyright Copyright (c) 2021
  * @author Thang Nguyen
@@ -45,13 +47,11 @@ class OrderService implements ServiceInterface
     public function handle()
     {
         $gross_price = 0;
-        foreach ($this->products as $product)
-        {
+        foreach ($this->products as $product) {
             $this->provider->setProduct($product);
             $shipping_service = new ShippingService($this->provider);
             $gross_price += $shipping_service->handle() + $this->provider->getProductPrice();
         }
         return $gross_price;
     }
-
 }
