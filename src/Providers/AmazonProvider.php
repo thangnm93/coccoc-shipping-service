@@ -18,12 +18,12 @@ class AmazonProvider extends Provider implements ProviderInterface
     /**
      * The coefficient of the weight per kg, convert coefficient price per gram
      */
-    protected const WEIGHT_COEFFICIENT = 11 / 1000;
+    const WEIGHT_COEFFICIENT = 11 / 1000;
 
     /**
      * The coefficient of the dimension per m3, convert coefficient price per cm3
      */
-    public const DIMENSION_COEFFICIENT = 11 / 1000000;
+    const DIMENSION_COEFFICIENT = 11 / 1000000;
 
     /**
      * Get the fee by the weight
