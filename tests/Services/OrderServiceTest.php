@@ -32,8 +32,7 @@ class OrderServiceTest extends BaseTestCase
         try {
             $_provider = $this->getPrivateOrProtectedProperty($order_service, 'provider');
             self::assertInstanceOf(ProviderInterface::class, $_provider);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProviderInterface::class, $provider);
         }
     }
@@ -64,8 +63,7 @@ class OrderServiceTest extends BaseTestCase
             $order_service->setProduct($_mock_product);
             $_products = $this->getPrivateOrProtectedProperty($order_service, 'products');
             self::assertCount(1, $_products);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProductInterface::class, $_mock_product);
         }
     }
@@ -97,8 +95,7 @@ class OrderServiceTest extends BaseTestCase
                 $order_service->setProduct($product);
             }
             $gross_price = $order_service->handle();
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProviderInterface::class, $provider);
         }
     }
@@ -123,5 +120,4 @@ class OrderServiceTest extends BaseTestCase
         $product->setDepth($mock_product['depth']);
         return $product;
     }
-
 }

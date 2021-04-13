@@ -74,5 +74,4 @@ class BaseTestCase extends TestCase
         $property->setAccessible(true);
         return $property->getValue($object);
     }
-
 }

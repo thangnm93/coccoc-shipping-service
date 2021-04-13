@@ -25,8 +25,7 @@ class ShippingServiceTest extends BaseTestCase
         $provider = new \stdClass();
         try {
             new ShippingService($provider);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProviderInterface::class, $provider);
         }
     }
@@ -50,8 +49,7 @@ class ShippingServiceTest extends BaseTestCase
             $provider->setProduct($product);
             $shipping_service = new ShippingService($provider);
             $shipping_service->handle();
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProductInterface::class, $product);
         }
     }
@@ -72,5 +70,4 @@ class ShippingServiceTest extends BaseTestCase
         $product->setDepth($mock_product['depth']);
         return $product;
     }
-
 }

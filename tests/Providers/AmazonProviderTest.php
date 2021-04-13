@@ -30,8 +30,7 @@ class AmazonProviderTest extends BaseTestCase
         $product = new \stdClass();
         try {
             $amazon_provider->setProduct($product);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertNotInstanceOf(ProductInterface::class, $product);
         }
     }
@@ -118,5 +117,4 @@ class AmazonProviderTest extends BaseTestCase
         $product->setDepth($mock_product['depth']);
         return $product;
     }
-
 }

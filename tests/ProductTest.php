@@ -29,8 +29,7 @@ class ProductTest extends BaseTestCase
             $price = "1211.1,0";
             $product = new Product();
             $product->setPrice($price);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertEquals("A non well formed numeric value encountered", $throwable->getMessage());
         }
     }
@@ -41,8 +40,7 @@ class ProductTest extends BaseTestCase
             $weight = "100,1s";
             $product = new Product();
             $product->setWeight($weight);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertEquals("A non well formed numeric value encountered", $throwable->getMessage());
         }
     }
@@ -53,8 +51,7 @@ class ProductTest extends BaseTestCase
             $width = "122.1!@";
             $product = new Product();
             $product->setWeight($width);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertEquals("A non well formed numeric value encountered", $throwable->getMessage());
         }
     }
@@ -65,8 +62,7 @@ class ProductTest extends BaseTestCase
             $height = "1200??09";
             $product = new Product();
             $product->setHeight($height);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertEquals("A non well formed numeric value encountered", $throwable->getMessage());
         }
     }
@@ -77,8 +73,7 @@ class ProductTest extends BaseTestCase
             $depth = "string";
             $product = new Product();
             $product->setDepth($depth);
-        } catch (\Throwable $throwable)
-        {
+        } catch (\Throwable $throwable) {
             self::assertStringContainsString("must be of the type float", $throwable->getMessage());
         }
     }
